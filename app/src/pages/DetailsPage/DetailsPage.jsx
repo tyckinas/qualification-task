@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useMatch, useParams } from 'react-router-dom'
 
 const DetailsPage = () => {
-    const [post, setPost] = useState(null);
+    const [post, setPost] = useState({});
     const {postId} = useParams()
     useEffect(() => {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`)
