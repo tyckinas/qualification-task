@@ -28,7 +28,7 @@ const ListPage = () => {
   const [posts, setPosts] = useState([]);
   let navigate = useNavigate()
   const handleRowClick = (row) => {
-    navigate('/home')
+    navigate(`/postDetails/${row.id}`)
   }
 
   const emptyRows =
@@ -59,7 +59,7 @@ const ListPage = () => {
             ? posts.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             : posts
           ).map((row) => (
-            <TableRow key={row.id} onClick={() =>handleRowClick()}>
+            <TableRow key={row.id} onClick={() =>handleRowClick(row)}>
               <TableCell component="th" scope="row">
                 {row.title}
               </TableCell>

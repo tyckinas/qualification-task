@@ -17,9 +17,7 @@ const Main = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>
-                <Link to="/details">About</Link>
-              </li>
+             
               <li>
                 <Link to="/new-record-form">Users</Link>
               </li>
@@ -30,7 +28,7 @@ const Main = () => {
           <Routes>
             <Route exact path="/" element={ <ListPage />} />
              
-            <Route path="/details" element={ <DetailsPage />} />
+            <Route path="/postDetails/:postId" exact element={ <DetailsPage />} />
              
               
             <Route path="/new-record-form" element={<NewRecordForm/>} />
