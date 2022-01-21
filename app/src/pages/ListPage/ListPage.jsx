@@ -45,7 +45,7 @@ const ListPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("http://localhost:3000/posts")
       .then((data) => setPosts(data.data));
   }, []);
 
@@ -59,7 +59,7 @@ const ListPage = () => {
             ? posts.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             : posts
           ).map((row) => (
-            <TableRow key={row.id} onClick={() =>handleRowClick(row)}>
+            <TableRow key={row._id} onClick={() =>handleRowClick(row)}>
               <TableCell component="th" scope="row">
                 {row.title}
               </TableCell>
