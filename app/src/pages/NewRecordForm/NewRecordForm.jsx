@@ -8,12 +8,9 @@ const NewRecordForm = () => {
     initialValues: {
       title: "",
       body: "",
-      userId: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log(values);
-      axios.post("https://jsonplaceholder.typicode.com/posts", values)
+      axios.post("http://localhost:3000/posts", values)
       .then(data => setNewPost(data.data))
 
     },
@@ -39,15 +36,7 @@ const NewRecordForm = () => {
         onChange={formik.handleChange}
         value={formik.values.body}
       />
-      <label htmlFor="userId">User ID</label>
-
-    <input
-        id="userId"
-        name="userId"
-        type="number"
-        onChange={formik.handleChange}
-        value={formik.values.usrId}
-      />
+  
       <button type="submit">Paukst</button>
     </form>
   );

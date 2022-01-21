@@ -28,7 +28,7 @@ const ListPage = () => {
   const [posts, setPosts] = useState([]);
   let navigate = useNavigate()
   const handleRowClick = (row) => {
-    navigate(`/postDetails/${row.id}`)
+    navigate(`/posts/${row._id}`)
   }
 
   const emptyRows =

@@ -28,7 +28,7 @@ const Main = () => {
           <Routes>
             <Route exact path="/" element={ <ListPage />} />
              
-            <Route path="/postDetails/:postId" exact element={ <DetailsPage />} />
+            <Route path="/posts/:postId" exact element={ <DetailsPage />} />
              
               
             <Route path="/newRecordForm" element={<NewRecordForm/>} />

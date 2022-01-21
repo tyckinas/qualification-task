@@ -6,7 +6,7 @@ const DetailsPage = () => {
     const [post, setPost] = useState({});
     const {postId} = useParams()
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+        axios.get(`http://localhost:3000/posts/${postId}`)
         .then(data=> setPost(data.data))
     }, [])
     console.log(post)
