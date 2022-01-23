@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
-import { useMatch, useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
+import './DetailsPage.css'
 
 const DetailsPage = () => {
     const [post, setPost] = useState({});
@@ -12,9 +13,15 @@ const DetailsPage = () => {
     console.log(post)
 
     return (
-        <div>
+        <div className='post__container'>
+            <div className='post__header'>
+
             <h1>{post.title}</h1>
+            </div>
+            <div className='post__body'>
+
             <p>{post.body}</p>
+            </div>
         </div>
     )
 }

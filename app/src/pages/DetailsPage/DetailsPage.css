@@ -1,0 +1,26 @@
+.post__container {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:  1px solid lightslategray;
+    width: 40vw;
+    height: 40vh;
+    border-radius: 24px;
+    overflow:hidden;
+    font-family:  'Mochiy Pop P One', sans-serif;;
+    font-weight: 900;
+
+}
+
+.post__header{
+    background-color: #03C03C;
+    border-radius: 24px  24px 0 0 ;
+    text-align: center;
+}
+.post__body {
+    padding-left: 12px;
+    background-color: rgb(211, 156, 211);
+}

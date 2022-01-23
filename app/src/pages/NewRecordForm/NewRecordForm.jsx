@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { useFormik } from "formik";
 import axios from "axios";
+import './NewRecordForm.css'
 
 const NewRecordForm = () => {
   const [newPost, setNewPost] = useState({});
@@ -18,27 +19,36 @@ const NewRecordForm = () => {
   console.log(newPost)
 
   return (
+    <div className="form__container">
+
     <form onSubmit={formik.handleSubmit}>
+      <div className="form__input-field">
+
       <label htmlFor="title">Title</label>
-      <input
+      <textarea
         id="title"
         name="title"
         type="text"
         onChange={formik.handleChange}
         value={formik.values.title}
-      />
+        />
+        </div>
+      <div className="form__input-field">
 
       <label htmlFor="body">Body</label>
-      <input
+      <textarea
         id="body"
         name="body"
         type="text"
         onChange={formik.handleChange}
         value={formik.values.body}
-      />
+        />
+        </div>
   
-      <button type="submit">Paukst</button>
+      <button type="submit">Create post</button>
     </form>
+    </div>
+
   );
 };
 
