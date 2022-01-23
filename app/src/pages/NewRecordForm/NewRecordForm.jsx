@@ -16,7 +16,6 @@ const NewRecordForm = () => {
 
     },
   });
-  console.log(newPost)
 
   return (
     <div className="form__container">

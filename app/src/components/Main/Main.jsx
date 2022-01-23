@@ -16,7 +16,7 @@ const Main = () => {
 
         <Route path="/posts/:postId" exact element={<DetailsPage />} />
 
-        <Route path="/newRecordForm" element={<NewRecordForm />} />
+        <Route path="/newPostForm" element={<NewRecordForm />} />
       </Routes>
     </Router>
   );

@@ -9,7 +9,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/newRecordForm">Users</Link>
+            <Link to="/newPostForm">Users</Link>
           </li>
         </ul>
       </nav>
