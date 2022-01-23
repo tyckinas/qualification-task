@@ -4,17 +4,19 @@ import axios from "axios";
 import "./NewPostForm.css";
 
 const NewPostForm = () => {
-  const [newPost, setNewPost] = useState({});
   const [error, setError] = useState(null);
+  const [isCreated, setIsCreated] = useState(false);
 
   const formik = useFormik({
     initialValues: {
       title: "",
       body: "",
     },
-    onSubmit: async (values) => {
+    onSubmit: async (values , {resetForm}) => {
       try {
         const res = await axios.post("http://localhost:3000/posts", values);
+        resetForm({})
+        setIsCreated(true)
       } catch (err) {
         setError(err);
         console.log(err);
@@ -32,7 +34,7 @@ const NewPostForm = () => {
             name="title"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.title}
+            value={formik.values.title || ""}
           />
         </div>
         <div className="form__input-field">
@@ -42,11 +44,15 @@ const NewPostForm = () => {
             name="body"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.body}
+            value={formik.values.body || ""}
           />
         </div>
 
         <button type="submit">Create post</button>
+        {
+          isCreated ? <p className="form__">New post succesfully created</p> : ''
+
+        }
       </form>
     </div>
   );

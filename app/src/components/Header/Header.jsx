@@ -6,10 +6,10 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Posts</Link>
           </li>
           <li>
-            <Link to="/newPostForm">Users</Link>
+            <Link to="/newPostForm">Create Post</Link>
           </li>
         </ul>
       </nav>

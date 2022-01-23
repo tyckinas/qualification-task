@@ -27,7 +27,6 @@ const ListPage = () => {
     return <div>Couldn't load posts.</div>;
   };
 
-  console.log(posts);
 
   return <> {error ? <GetErrorView /> : <PostsTable posts={posts} />}</>;
 };
