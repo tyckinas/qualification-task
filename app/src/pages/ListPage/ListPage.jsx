@@ -23,13 +23,13 @@ const ListPage = () => {
     fetchPosts();
   }, []);
 
-  const getErrorView = () => {
-    return <div>Something went wrong.</div>;
+  const GetErrorView = () => {
+    return <div>Couldn't load posts.</div>;
   };
 
   console.log(posts);
 
-  return <>{error ? <PostsTable posts={posts} /> : getErrorView()}</>;
+  return <> {error ? <GetErrorView /> : <PostsTable posts={posts} />}</>;
 };
 
 export default ListPage;

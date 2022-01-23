@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DetailsPage from "../../pages/DetailsPage/DetailsPage";
 import ListPage from "../../pages/ListPage/ListPage";
-import NewRecordForm from "../../pages/NewRecordForm/NewRecordForm";
+import NewPostForm from "../../pages/NewPostForm/NewPostForm";
 
 import Header from '../Header/Header';
 
@@ -16,7 +16,7 @@ const Main = () => {
 
         <Route path="/posts/:postId" exact element={<DetailsPage />} />
 
-        <Route path="/newPostForm" element={<NewRecordForm />} />
+        <Route path="/newPostForm" element={<NewPostForm />} />
       </Routes>
     </Router>
   );
