@@ -9,7 +9,7 @@ const Header = () => {
             <Link to="/">Posts</Link>
           </li>
           <li>
-            <Link to="/newPostForm">Create Post</Link>
+            <Link to="/newPostForm">Create a Post</Link>
           </li>
         </ul>
       </nav>

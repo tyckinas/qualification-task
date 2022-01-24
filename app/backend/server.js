@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 mongoose.connect(
-  "mongodb+srv://admin:admin@cluster0.nwdyk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.nwdyk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
